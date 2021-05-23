@@ -27,6 +27,7 @@ router.post("/", function (req, res, next) {
       if (err) {
         return res.send({
           response: "ERROR",
+          message: err.message,
         });
       }
       res.send({
