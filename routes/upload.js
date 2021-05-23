@@ -22,7 +22,7 @@ router.post("/", function (req, res, next) {
       },
     });
 
-    var upload = multer({ storage: storage }).array("userFile", 20);
+    var upload = multer({ storage: storage }).array("userFile", 500);
     upload(req, res, function (err) {
       if (err) {
         return res.send({
